@@ -8,7 +8,6 @@ function kilometerToMeter(input){
     var meter = input * 1000;
     return meter;
 }
-
 //console.log(kilometerToMeter(0.5));
 
 
