@@ -1,5 +1,4 @@
-
-
+//https://github.com/smsabir/Javascript-problems
 
 function kilometerToMeter(input){
 
@@ -26,6 +25,7 @@ function budgetCalculator(watch, phone, laptop){
     return totalBudget;
 }
 //console.log(budgetCalculator(1, 1, 1)); */
+
 
 function hotelCost(days){
     var exactDays = Math.ceil(days); // always counting extra few hours as a whole day. Like 1 days 5 hours = 2 days.
@@ -56,6 +56,7 @@ function hotelCost(days){
     return cost;
 }
 //console.log(hotelCost(1.1));
+
 
 function megaFriend(array){
     var large = 0;
