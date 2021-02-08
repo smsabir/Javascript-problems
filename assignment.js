@@ -20,10 +20,10 @@ function budgetCalculator(watch, phone, laptop){
     if( Math.round(watch) < 0 || Math.round(phone) < 0 || Math.round(phone) < 0){
         return "Product(s) quantity cannot be negative or Zero."
     }
-    totalBudget = Math.round(watch) * watchPrice + Math.round(phone) * phonePrice + Math.round(phone) * laptopPrice;
+    totalBudget = Math.round(watch) * watchPrice + Math.round(phone) * phonePrice + Math.round(laptop) * laptopPrice;
     return totalBudget;
 }
-//console.log(budgetCalculator(1, 1, 1)); */
+// console.log(budgetCalculator(1, 1, 1)); 
 
 
 function hotelCost(days){
@@ -42,19 +42,19 @@ function hotelCost(days){
             cost = 10 * rent;
             remainingDays = exactDays - 10; // for calculating discount price for day 11-20;
 
-            if(remainingDays > 0){
-                var nextRemDays = remainingDays - 10; // to exclude days after 20th days. So from 11-20th.
-                cost = cost + ((remainingDays-nextRemDays)*80); 
-
-                if(nextRemDays > 0){
-                    cost = cost + (nextRemDays*50); // from 21st to beyond. 
-                }
-            } 
+            if(remainingDays < 11){
+                 // to exclude days after 20th days. So from 11-20th.
+                cost = cost + (remainingDays*80); 
+            }
+            else if (remainingDays > 10){
+                var nextRemDays = remainingDays - 10;
+                cost = cost + (remainingDays-nextRemDays)*80 + (nextRemDays*50) ; // from 21st to beyond. 
+            }
         }
     }
     return cost;
 }
-//console.log(hotelCost(1.1));
+// console.log(hotelCost(21));
 
 
 function megaFriend(array){
@@ -73,4 +73,3 @@ function megaFriend(array){
 }
 // var array = ["Asif", "Jamal", "Kalimuddin"];
 // console.log(megaFriend(array));
-
